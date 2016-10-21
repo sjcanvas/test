@@ -17,7 +17,4 @@
         return Testcase.PASS         
 
     def clean(self):
-        """Some house cleaning"""
-
-        return Testcase.PASS
 
