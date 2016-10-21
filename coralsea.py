@@ -18,15 +18,6 @@
 
     def clean(self):
         """Some house cleaning"""
-        rslt = self.pc1.cmd('rm /tmp/report.txt')       
-        if  rslt:
-            log.error('config failed')
-            return Testcase.FAIL
-        log.info('clean sql count')
-#        os.remove(self.running_flag)
-        rslt = self.dut1.sql(database = "utad_db", cmd="delete from malware_report_tbl;")
-        if not rslt:
-            print "sql unsuccessfully"
-            return Testcase.FAIL
+
         return Testcase.PASS
 
